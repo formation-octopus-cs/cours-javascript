@@ -7,17 +7,21 @@
 </head>
 
 <body>
-    <h1 id="titre">Mon titre 1</h1>
+    <h1 id="titre" class="titre">Mon titre 1</h1>
     <h2 id="sousTitre">Mon Sous titre</h2>
     <h3 id="chapeau">Chapeau de l'article</h3>
     <div id="contenu">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, illo autem saepe non explicabo modi! Unde laborum
-            non voluptate totam dignissimos quod. Suscipit aliquam a quisquam necessitatibus aspernatur maxime obcaecati.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nemo dicta dolorum molestiae quo quae ad, eaque veniam
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, illo autem saepe non explicabo modi! Unde
+            laborum
+            non voluptate totam dignissimos quod. Suscipit aliquam a quisquam necessitatibus aspernatur maxime
+            obcaecati.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nemo dicta dolorum molestiae quo quae ad,
+            eaque veniam
             consectetur quisquam optio et! Quam, modi sapiente labore voluptas nemo nihil architecto!</p>
         <div id="encart">
             <h3>Titre de l'encart</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro inventore corrupti corporis sed ea ullam magni
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro inventore corrupti corporis sed ea ullam
+                magni
                 fugit in aliquid illo expedita suscipit officia quibusdam ipsum, et libero eum iure esse!</p>
         </div>
     </div>
@@ -25,11 +29,49 @@
 
 </html>
 <style>
-    body{
+    body {
         margin: 8pt;
         color: rgb(93, 95, 97);
     }
+
+    .titre {
+        color: rgba(23, 111, 199, 0.5);
+
+    }
+
+    .titre:hover {
+        cursor: pointer;
+    }
 </style>
 <script>
-   
+    var titrePage = document.querySelector('title');
+    var titrePageBis = document.title;
+    var titreArticle = document.getElementById('titre');
+    var sousTitre = document.getElementById('sousTitre');
+    var chapeau = document.getElementById('chapeau');
+    var contenu = document.getElementById('contenu');
+    var encart = document.getElementById('encart');
+
+    // On change le titre de la page
+    titrePage.textContent = 'Mon nouveau titre de page';
+    // On positionne titre sous-titre et chapeau
+
+
+    titreArticle.addEventListener('click', () => {
+        titreArticle.style.cssText = "font-family: 'Courier New', Courier, monospace;text-align: center;font-size: 24pt;padding: 8pt;color: rgb(46, 52, 58)";
+        this.test('super cool');
+
+    });
+
+    titreArticle.addEventListener('mouseover', () => { console.log('fais quelque chose '); });
+
+    test = (param) => {
+        console.log(param);
+
+    }
+
+    texte = document.querySelector('div#contenu > p');
+    texte.style.cssText = "color: #FF0000;";
+
+
 </script>

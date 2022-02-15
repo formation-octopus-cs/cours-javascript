@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Page Title</title>
+
+    <style>
+        body {
+            margin: 8pt;
+            font-size: 16pt;
+        }
+
+        label {
+            margin-bottom: 8pt;
+        }
+
+        input {
+            padding: 12pt 20pt;
+            box-sizing: border-box;
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background: linear-gradient(#7e7d7d, hsl(0, 0%, 57%), #7e7d7d);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background: linear-gradient(#a7a7a7, hsl(0, 1%, 77%), #a7a7a7);
+            border: none;
+        }
+
+        #global {
+            display: flex;
+
+        }
+
+        #contact {
+            display: flex;
+        }
+
+        #contact>div>form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #aide {
+            margin: 0pt 0pt 0pt 24pt;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #helpEmail {
+            visibility: hidden;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: rgba(104, 212, 110, 0.589);
+            text-align: left;
+        }
+
+        #helpPass {
+            visibility: hidden;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: rgba(104, 212, 110, 0.589);
+            text-align: left;
+        }
+
+        #emailOk {
+            visibility: hidden;
+            color: rgb(5, 126, 65);
+            margin: 8pt;
+        }
+
+        #passwordOk {
+            visibility: hidden;
+            color: rgb(5, 126, 65);
+            margin: 8pt;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <section id="global">
+            <section id="contact">
+                <div id="formulaire">
+                    <form action="">
+                        <label for="email">Adresse email : </label>
+                        <input type="text" name="email" placeholder="Adresse eMail" id="email">
+                        <span id="emailOk">Email valide</span>
+                        <label for="pass">Password : </label>
+                        <input type="text" name="pass" placeholder="Mot de passe" id="pass">
+                        <span id="passwordOk">Mot de passe valide</span>
+                        <input type="submit">
+                    </form>
+                </div>
+            </section>
+            <section id="aide">
+                <div id="helpEmail">
+                    <p>L'email doit être valide</p>
+                </div>
+                <div id="helpPass">
+                    <p>Le pass doit contenir : </p>
+                    <ul>
+                        <li >8 caractères minimum</li>
+                        <li>1 chiffre</li>
+                        <li>1 majuscule</li>
+                        <li>+ 1 caractère spécial</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </body>
+
+</html>
+<script>
+   
+
+</script>
